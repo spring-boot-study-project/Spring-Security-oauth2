@@ -18,7 +18,8 @@ jobs:
 
       - name: Code Review GPT
         uses: mattzcarey/code-review-gpt@v0.1.8
-        with:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          MODEL: 'gpt-4o'
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_SHA: ${{ github.sha }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
