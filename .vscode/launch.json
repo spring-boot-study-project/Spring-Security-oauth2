@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Springsecurityoauth2Application",
+            "request": "launch",
+            "mainClass": "io.security.oauth2.springsecurityoauth2.Springsecurityoauth2Application",
+            "projectName": "springsecurityoauth2"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

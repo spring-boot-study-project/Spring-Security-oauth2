@@ -1,1 +1,60 @@
+server:
+    port: 8081
 
+spring:
+    security:
+        oauth2:
+            client:
+                registration:
+                    keycloak:
+                        client-id: oauth2-client-app
+                        client-secret: zlvRZaTJGI2dEPwDCXMJBWXL3HdQhpWe
+                        client-name: client-app
+                        redirect-uri: http://localhost:8081/client
+                        authorization-grant-type: client_credentials
+                        # authorization-grant-type: authorization_code
+                        # authorization-grant-type: refresh_token
+                        # authorization-grant-type: password
+                        client-authentication-method: client_secret_basic
+                        # scope: openid, profile, email
+                        provider: keycloak
+                    # keycloak1:
+                    #     client-id: oauth2-client-app
+                    #     client-secret: zlvRZaTJGI2dEPwDCXMJBWXL3HdQhpWe
+                    #     client-name: client-app
+                    #     redirect-uri: http://localhost:8081/login/oauth2/code/keycloak
+                    #     authorization-grant-type: authorization_code
+                    #     client-authentication-method: client_secret_basic
+                    #     scope: openid, profile, email
+                    #     provider: keycloak
+
+                    # keycloakWithPKCE:
+                    #     clientId: oauth2-client-app2
+                    #     clientSecret: vXBV5KVJgRASwU58rEUWmWyROGJhaFdK
+                    #     clientName: client-app2
+                    #     authorizationGrantType: authorization_code
+                    #     scope: openid, profile, email
+                    #     # clientAuthenticationMethod: client_secret_basic
+                    #     # clientAuthenticationMethod: none # 클라이언트 id 만 가지고 권한 부여를 하겠다는 의미 (secret 없이 권한 부여)
+                    #     clientAuthenticationMethod: client_secret_basic
+                    #     redirect-uri: http://localhost:8081/login/oauth2/code/keycloak
+                    #     provider: keycloak
+
+                    # keycloak2:
+                    #     clientId: oauth2-client-app3
+                    #     clientSecret: FdSj6sdJUFlxb31H7xKwhPi47TswrtF0
+                    #     clientName: client-app3
+                    #     authorizationGrantType: implicit
+                    #     scope: openid, profile, email
+                    #     clientAuthenticationMethod: none
+                    #     redirect-uri: http://localhost:8081/home
+                    #     provider: keycloak
+
+                provider:
+                    keycloak:
+                        # authorization-uri: http://localhost/realms/oauth2/protocol/openid-connect/auth
+                        # token-uri: http://localhost/realms/oauth2/protocol/openid-connect/token
+                        issuer-uri: http://localhost/realms/oauth2
+                        # user-info-uri: http://localhost/realms/oauth2/protocol/openid-connect/userinfo
+                        # jwk-set-uri: http://localhost/realms/oauth2/protocol/openid-connect/certs
+                        # user-name-attribute: preferred_username
