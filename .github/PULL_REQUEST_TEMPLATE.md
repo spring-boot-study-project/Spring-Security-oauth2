@@ -1,8 +1,3 @@
-<!-- 
-제목 : feat(#issueNum) : 기능명
-ex) feat(4): pull request template 작성
--->
-
 ## 📌 관련 이슈
 
 - closed: #issueNum
