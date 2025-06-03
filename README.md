@@ -160,9 +160,13 @@ private String provider;
 
 ## 설정 클래스
 OAuth2ClientProperties 이를 사용하는 곳을 찾아보면 
+
 ![설정 사진](./image/configur_2.png "설정 사진")
+
 이런 설정 클래스가 있는데 여기서 설정을 초기화 해주는 모습을 확인할 수 있다. 잘 보면 ClientRegistration이 값에 바인딩하고 있는데 여기 들어가면
+
 ![설정 사진](./image/configur_3.png "설정 사진")
+
 oauth2 통신에 필요한 값들이 뭐뭐가 있는지 확인할 수 있었다. 이 값을 가지고 인가 서버와 통신하는 것이다.
 
 ## 우리가 자주 사용하는 인증 서버 제공자
