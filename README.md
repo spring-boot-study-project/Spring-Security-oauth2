@@ -350,7 +350,15 @@ spring:
 
 ![설정 사진](./image/configur_8.png "설정 사진")
 
-마지막 builder에 들어가 있는 값을 확인해보면 yml에 설정해준 값들이 다 들어가 있는 모습을 확인할 수 있었다.
+마지막 builder에 들어가 있는 값을 확인해보면 yml에 설정해준 값들이 다 들어가 있는 모습을 확인할 수 있었다. 여기서 중요한 포인트는 인가 서버의 주소를 적어주게 되면 인가 서버를 통해서 
+```
+authorization-uri: http://localhost/realms/oauth2/protocol/openid-connect/auth
+token-uri: http://localhost/realms/oauth2/protocol/openid-connect/token
+user-info-uri: http://localhost/realms/oauth2/protocol/openid-connect/userinfo
+jwk-set-uri: http://localhost/realms/oauth2/protocol/openid-connect/certs
+user-name-attribute: preferred_username
+```
+이런 부가적인 정보들을 받아오게 되는데 아까전에 언급한 Common oauth2 서버의 경우엔 이미 라이브러리에 작성이 되어있는데 provider에 이슈어를 작성하게 되면 안해도 될 통신을 한번 더 하게 된다는 것이다.
 
 ## Common oauth2 연결
 그렇다면 만약 기본 제공자가 있다면 provider 값이 필요할까? common provider에 기본적인 제공자 값이 존재하는데 issuer-uri 값을 셋팅하면 존재하는데 한번 더 네트워크 통신을 하기 때문에 이는 필요 없다. 제공자를 작성하지 않고 작성하자 (redirect 값도 필요 없다. client id와 secret 값만 있으면 된다.)
