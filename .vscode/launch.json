@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SecurityResoourceServerApplication",
+            "request": "launch",
+            "mainClass": "com.springboot.security_resoource_server.SecurityResoourceServerApplication",
+            "projectName": "security-resoource-server"
+        },
+        {
+            "type": "java",
             "name": "Springsecurityoauth2Application",
             "request": "launch",
             "mainClass": "io.security.oauth2.springsecurityoauth2.Springsecurityoauth2Application",
