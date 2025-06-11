@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SecurityAuthorizationServerApplication",
+            "request": "launch",
+            "mainClass": "com.springboot.security_authorization_server.SecurityAuthorizationServerApplication",
+            "projectName": "security-authorization-server"
+        },
+        {
+            "type": "java",
             "name": "SecurityResoourceServerApplication",
             "request": "launch",
             "mainClass": "com.springboot.security_resoource_server.SecurityResoourceServerApplication",
